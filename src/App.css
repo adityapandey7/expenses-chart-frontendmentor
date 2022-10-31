@@ -1,38 +1,136 @@
-.App {
-  text-align: center;
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: aliceblue;
+}
+.expenses-card{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 350px;
+}
+.expenses-heading{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(239, 46, 46);
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    
+    padding: 10px;
+    color: white;
+}
+.expenses-heading-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    margin: 10px 5px;
+}
+.expenses-heading-data span{
+    font-size: 14px;
+}
+.expenses-heading-data h5{
+    
+    font-size: 22px;
+}
+.logo{
+display: flex;
+justify-content: center;
+transform: scale(0.70);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* bar */
+.expenses-bar{
+    background-color: white;
+    color: black;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    padding: 10px 5px;
+}
+.expenses-bar-title{
+    margin: 10px 5px;
+    font-size: 22px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.expenses-bar-details{
+    margin: 10px 5px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.expenses-bar-details-total, .expenses-bar-details-last{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+}
+.expenses-bar-details-total span{
+    font-size: 14px;
+    opacity: 0.5;
+}
+.expenses-bar-details-total h2{
+    font-size: 32px;
+}
+.expenses-bar-details-last{
+    gap:2px;
+}
+.expenses-bar-details-last span:nth-of-type(1) {
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 55px;
+}
+.expenses-bar-details-last span:nth-of-type(2) {
+    font-size: 14px;
+    opacity: 0.5;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+hr{
+    margin: 0 5px;
 }
 
-.App-link {
-  color: #61dafb;
+/* bar style */
+.bar{
+    margin: 0 5px 10px;
+    display: flex;
+    gap: 10px;
+    height: 125px;
+    justify-content: space-between;
+}
+.day{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+}
+.bar-bar{
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    width: 35px
+}
+.price-box{
+    padding: 5px;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    display: none;
+    margin: 0 -5px;
+    margin-bottom: 5px;
+}
+.day:hover{
+    opacity: 0.7;
+}
+ .day:hover  .price-box{
+    display: block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
